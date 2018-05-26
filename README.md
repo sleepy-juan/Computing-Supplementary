@@ -2,7 +2,7 @@
 Computing Supplementaries made by myself  
 
 ## Python Programming
-Supplmentaries for Introduction to Programming, CS101, KAIST  
+This is originally made for Introduction to Programming, CS101, KAIST. However, this covers the very basic grammar questions before list in Python. This would be useful to start Python Programming.  
 * Introduction to Programming.docx
 * Introduction to Programming.pdf
 * Introduction to Programming _ Answers.docx
@@ -15,7 +15,7 @@ Supplmentaries for Introduction to Programming, CS101, KAIST
 * Note that, however, almost data is written by myself
 
 ## Assembly Programming
-Supplmentaries for Intel Architecture 32bit Assembly Programming, and this is useful for CS230 System Programming, KAIST, and EE209 Programming Structure for Electrical Engineering, KAIST.
+This is originally made for Assembly Supplementary for Programming Structure for Electrical Engineering, EE209, KAIST. This covers basic grammars, applications, and some examples for Intel Architecture 32bit Assembly Language.
 * IA32_KAIST_Juan Lee.pdf
 * Intel Architecture 32bit Assembly Language.docx
 
