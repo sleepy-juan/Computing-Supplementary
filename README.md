@@ -40,3 +40,6 @@ This is Sample Problems to study Algorithms. There is no answer for questions, a
 * Midterm Exam, CS300, Introduction to Algorihthm, KAIST, 2005 Spring
 * Midtem Sample Problems, CS300, Introduction to Algorithm, KAIST, prof. 최성희
 * Final Sample Problems, CS300, Introduction to Algorithm, KAIST
+
+## Image Processing.pptx
+Made when I was in high school, about image processing using python.
