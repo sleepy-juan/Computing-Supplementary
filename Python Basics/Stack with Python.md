@@ -46,14 +46,14 @@ class Stack:
 	
 	# pop: void -> element
 	# - pop the element from the stack
-	# - if the stack is empty, return null
+	# - if the stack is empty, return None
 	def pop(self):
 		if self.size == 0:
-			return null
+			return None
 		self.size -= 1
 		return self.stack.pop()
 ```
-`pop` 연산은 `size` 변수의 값을 하나 줄이고 `stack` 리스트의 마지막 값을 리턴하는 방식으로 간단하게 구현할 수 있습니다. 주의할 점은 스택이 비어있을 때, 즉 스택의 크기가 0일 때는 별도로 에러를 처리해주어야 합니다. 위 코드에서는 null을 리턴해주었습니다.
+`pop` 연산은 `size` 변수의 값을 하나 줄이고 `stack` 리스트의 마지막 값을 리턴하는 방식으로 간단하게 구현할 수 있습니다. 주의할 점은 스택이 비어있을 때, 즉 스택의 크기가 0일 때는 별도로 에러를 처리해주어야 합니다. 위 코드에서는 None을 리턴해주었습니다.
 ```python
 class Stack:
 	def __init__(self):
@@ -68,19 +68,19 @@ class Stack:
 	
 	# pop: void -> element
 	# - pop the element from the stack
-	# - if the stack is empty, return null
+	# - if the stack is empty, return None
 	def pop(self):
 		if self.size == 0:
-			return null
+			return None
 		self.size -= 1
 		return self.stack.pop()
 		
 	#top: void -> element
 	# - return the last element from the stack
-	# - if the stack is empty, return null
+	# - if the stack is empty, return None
 	def top(self):
 		if self.size == 0:
-			return null
+			return None
 		return self.stack[len(self.stack)-1]
 ```
 `top` 연산은 `stack` 리스트의 마지막 값을 크기의 조정 없이 리턴하며 구현할 수 있습니다. 주의할 점은 이때 자료를 삭제하지 않도록 주의해야 한다는 점이며, `pop` 과 마찬가지로 스택의 크기가 0일 때 에러 처리를 해주어야 한다는 점입니다.
@@ -102,8 +102,8 @@ def testStack():
 	testEqual(2, stack.top()) # test top
 	testEqual(2, stack.pop()) # test pop after top
 	testEqual(3, stack.pop()) # test pop
-	testEqual(null, stack.pop()) # test pop if empty
-	testEqual(null, stack.top()) # test top if empty
+	testEqual(None, stack.pop()) # test pop if empty
+	testEqual(None, stack.top()) # test top if empty
 ```
 
 ## 정리하기
@@ -124,19 +124,19 @@ class Stack:
 	
 	# pop: void -> element
 	# - pop the element from the stack
-	# - if the stack is empty, return null
+	# - if the stack is empty, return None
 	def pop(self):
 		if self.size == 0:
-			return null
+			return None
 		self.size -= 1
 		return self.stack.pop()
 		
 	#top: void -> element
 	# - return the last element from the stack
-	# - if the stack is empty, return null
+	# - if the stack is empty, return None
 	def top(self):
 		if self.size == 0:
-			return null
+			return None
 		return self.stack[len(self.stack)-1]
 ```
 
