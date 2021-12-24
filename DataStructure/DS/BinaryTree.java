@@ -57,6 +57,7 @@ public class BinaryTree {
     // set left child
     public void setLeft(String newElem) {
         BinaryTree newTree = new BinaryTree();
+        newTree.elem = newElem;
         newTree.parent = this;
         left = newTree;
     }
@@ -64,6 +65,7 @@ public class BinaryTree {
     // set right child
     public void setRight(String newElem) {
         BinaryTree newTree = new BinaryTree();
+        newTree.elem = newElem;
         newTree.parent = this;
         right = newTree;
     }

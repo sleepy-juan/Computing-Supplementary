@@ -30,31 +30,32 @@ public class ExpressionTree {
     // 1. only two operand if no bracket. e.g. 1+2+3 will be given as (1+2)+3
     // 2. number is one-digit positive integer
     public static BinaryTree construct(String exp) {
+        System.out.println(exp);
         BinaryTree root = new BinaryTree();
 
         /* left operand */
         int opIndex = 1; // index of operator
         if (Character.isDigit(/*** (1) ***/)) {
-            root.setLeft(Character.toString(/*** (1) ***/));
+            root.setLeft(/*** (2) ***/);
         } else {
-            int index = closingIndex(exp, /*** (2) ***/);
-            BinaryTree left = construct(exp.substring(1, index - 1));
+            int index = closingIndex(exp, /*** (3) ***/);
+            BinaryTree left = construct(/*** (4) ***/);
             left.parent = root;
             root.left = left;
 
-            opIndex = /*** (3) ***/; // update operator index
+            opIndex = index + 1;
         }
 
         /* operator */
         root.elem = Character.toString(exp.charAt(opIndex));
 
         /* right operand */
-        if (Character.isDigit(/*** (4) ***/)) {
-            root.setRight(Character.toString(/*** (4) ***/));
+        if (Character.isDigit(/*** (5) ***/)) {
+            root.setRight(exp.substring(opIndex + 1, opIndex + 2));
         } else {
-            BinaryTree right = construct(exp.substring(opIndex + 1, /*** (5) ***/));
+            BinaryTree right = construct(exp.substring(/*** (6) ***/, exp.length() - 1));
             right.parent = root;
-            right.right = right;
+            root.right = right;
         }
 
         return root;
