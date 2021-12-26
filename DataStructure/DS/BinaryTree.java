@@ -70,22 +70,60 @@ public class BinaryTree {
         right = newTree;
     }
 
+    // traversal
+    public void preorder() {
+        System.out.print(elem);
+        System.out.print(", ");
+        if (left != null)
+            left.preorder();
+        if (right != null)
+            right.preorder();
+    }
+
+    public void postorder() {
+        if (left != null)
+            left.postorder();
+        if (right != null)
+            right.postorder();
+        System.out.print(elem);
+        System.out.print(", ");
+    }
+
+    public void inorder() {
+        if (left != null)
+            left.inorder();
+        System.out.print(elem);
+        System.out.print(", ");
+        if (right != null)
+            right.inorder();
+    }
+
     // run the main to check the code
     public static void main(String[] args) {
+        //
+        // --------A
+        // ----B-------C
+        // --D---E---F---G
+        //
+
         BinaryTree root = new BinaryTree();
-        root.elem = "ROOT";
+        root.elem = "A";
 
-        root.setLeft("LEFT");
-        root.setRight("RIGHT");
+        root.setLeft("B");
+        root.setRight("C");
 
-        root.left.setLeft("LEFT-LEFT");
-        root.left.setRight("LEFT-RIGHT");
-        root.right.setLeft("RIGHT-LEFT");
-        root.right.setRight("RIGHT-RIGHT");
+        root.left.setLeft("D");
+        root.left.setRight("E");
+        root.right.setLeft("F");
+        root.right.setRight("G");
 
-        root.right.right.setRight("RIGHT-RIGHT-RIGHT");
+        root.preorder(); // A, B, D, E, C, F, G,
+        System.out.println();
 
-        System.out.println(root.right.right.depth());
-        System.out.println(root.height());
+        root.postorder(); // D, E, B, F, G, C, A,
+        System.out.println();
+
+        root.inorder(); // D, B, E, A, F, C, G,
+        System.out.println();
     }
 }
