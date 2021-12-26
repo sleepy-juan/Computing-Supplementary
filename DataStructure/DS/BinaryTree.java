@@ -72,8 +72,7 @@ public class BinaryTree {
 
     // traversal
     public void preorder() {
-        System.out.print(elem);
-        System.out.print(", ");
+        System.out.println(elem);
         if (left != null)
             left.preorder();
         if (right != null)
@@ -85,15 +84,13 @@ public class BinaryTree {
             left.postorder();
         if (right != null)
             right.postorder();
-        System.out.print(elem);
-        System.out.print(", ");
+        System.out.println(elem);
     }
 
     public void inorder() {
         if (left != null)
             left.inorder();
-        System.out.print(elem);
-        System.out.print(", ");
+        System.out.println(elem);
         if (right != null)
             right.inorder();
     }
