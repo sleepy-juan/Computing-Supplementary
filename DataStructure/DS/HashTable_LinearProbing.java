@@ -25,25 +25,7 @@ public class HashTable_LinearProbing {
 
     // put (key, value)
     public void put(String key, String value) {
-        if (size == N)
-            return; // full
-
-        int h = key.hashCode(); // hashing
-        h = Math.abs(h) % N; // compressor
-
-        int i = h;
-        while (i != h - 1) {
-            if (buckets[i] == null) {
-                buckets[i] = new Node(key, value);
-                break;
-            }
-
-            i++;
-            if (i == N) {
-                i = 0;
-            }
-        }
-        size++;
+        // TODO: fill here
     }
 
     public String find(String key) {
@@ -65,22 +47,7 @@ public class HashTable_LinearProbing {
     }
 
     public void erase(String key) {
-        int h = key.hashCode(); // hashing
-        h = Math.abs(h) % N; // compressor
-
-        int i = h;
-        while (i != h - 1) {
-            if (buckets[i] != null && buckets[i].key.equals(key)) {
-                buckets[i] = null;
-                break;
-            }
-
-            i++;
-            if (i == N) {
-                i = 0;
-            }
-        }
-        size--;
+        // TODO: fill here
     }
 
     public int size() {
