@@ -1,3 +1,7 @@
+/*
+    BinarySearchTree.java
+*/
+
 package DS;
 
 public class BinarySearchTree {
